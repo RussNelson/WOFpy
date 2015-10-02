@@ -8,7 +8,7 @@ except ImportError:
     wsdl = Module(__name__)
 
 
-@wsdl.route('/soap/wateroneflow.wsdl')
+@wsdl.route('/soap/wateroneflow_1_1.wsdl')
 def get_wsdl():
 #TODO: The WSDL should be served separately from the Flask application.
 # Come up with a better way to do this.
@@ -19,9 +19,9 @@ def get_wsdl():
     except KeyError:
         serv_loc = current_app.config.get(
             'SOAP_SERVICE_URL',
-            '%s/wateroneflow/1_0/' % request.url.rsplit('/', 1)[0])
+            '%s/wateroneflow/1_1/' % request.url.rsplit('/', 1)[0])
 
-    response = make_response(render_template('wsdl_temp.wsdl',
+    response = make_response(render_template('wsdl_1_1_template.wsdl',
                                              serv_loc=serv_loc,
                                              network=network))
 

@@ -23,9 +23,23 @@ NSDEF = 'xmlns:gml="http://www.opengis.net/gml" \
 #TODO: For some reason, soaplib does not ignore <!--comments--> in the soap
 # requests so the default requests from soapUI will cause errors
 
+# wof11
+# GetSiteInfo
+# GetSiteInfoObject
+#  GetSiteInfoMultpleObject
+# GetSites
+# GetSitesByBoxObject
+# GetSitesObject
+# GetValues
+# GetValuesForASiteObject
+# GetValuesObject
+# GetVariableInfo
+# GetVariableInfoObject
+# GetVariables
+# GetVariablesObject
 
-def create_wof_service_class(wof_instance):
-    class WOFService(DefinitionBase):
+def create_wof_service_class_1_1(wof_instance):
+    class WOFService_1_1(DefinitionBase):
 
         wof_inst = wof_instance
 
@@ -195,4 +209,4 @@ def create_wof_service_class(wof_instance):
                 else:
                     raise Fault(faultstring=str(inst))
 
-    return WOFService
+    return WOFService_1_1

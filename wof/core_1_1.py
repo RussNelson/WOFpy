@@ -11,7 +11,7 @@ import wof.soap_wm111
 import WaterML_1_1 as WaterML
 
 
-class WOF(object):
+class WOF_1_1(object):
 
     network = 'NETWORK'
     vocabulary = 'VOCABULARY'

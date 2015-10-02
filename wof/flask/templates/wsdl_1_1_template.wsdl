@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.cuahsi.org/his/1.1/ws/" xmlns:s1="http://www.cuahsi.org/waterML/1.1/" xmlns:s2="http://www.cuahsi.org/his/1.1/ws/AbstractTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://www.cuahsi.org/his/1.1/ws/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div&gt;&lt;strong&gt;Developmental service. This service is internal CUAHSI use, and evaluation.&lt;/strong&gt;&lt;/div&gt;</wsdl:documentation>
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    Developmental Python implementation of WaterOneFlow for {{network}}</wsdl:documentation>
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://www.cuahsi.org/his/1.1/ws/">
       <s:import namespace="http://www.cuahsi.org/waterML/1.1/" />
@@ -1745,9 +1746,9 @@
   <wsdl:service name="WaterOneFlow">
     <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;div&gt;&lt;strong&gt;Developmental service. This service is internal CUAHSI use, and evaluation.&lt;/strong&gt;&lt;/div&gt;</wsdl:documentation>
     <wsdl:port name="WaterOneFlow" binding="tns:WaterOneFlow">
-      <soap:address location="http://icewater.usu.edu/littlebearriver/cuahsi_1_1.asmx" />
+      <soap:address location="{{serv_loc}}" />
     </wsdl:port>
-    <wsdl:port name="WaterOneFlow1" binding="tns:WaterOneFlow1">
+  <!--  <wsdl:port name="WaterOneFlow1" binding="tns:WaterOneFlow1">
       <soap12:address location="http://icewater.usu.edu/littlebearriver/cuahsi_1_1.asmx" />
     </wsdl:port>
     <wsdl:port name="WaterOneFlow2" binding="tns:WaterOneFlow2">
@@ -1756,5 +1757,6 @@
     <wsdl:port name="WaterOneFlow3" binding="tns:WaterOneFlow3">
       <http:address location="http://icewater.usu.edu/littlebearriver/cuahsi_1_1.asmx" />
     </wsdl:port>
+    -->
   </wsdl:service>
 </wsdl:definitions>
